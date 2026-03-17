@@ -13,7 +13,7 @@ RUN echo "Current directory inside container:" && pwd
 RUN echo "Listing files in working directory:" && ls -la
 
 # Then copy the JAR
-COPY target/*.jar app.jar
+COPY ../target/*.jar app.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
